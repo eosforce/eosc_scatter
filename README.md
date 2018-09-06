@@ -35,7 +35,7 @@
     #开发
     npm run dev
     #打包服务器
-    npm run build
+    npm run build // eosc_scatter/dist/ 目录将会有压缩后的应用
 
 
 # 前端调用scatter的API
