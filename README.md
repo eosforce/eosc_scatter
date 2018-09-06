@@ -1,7 +1,6 @@
 # eosc_scatter 使用说明和部署文档
 
 # 安装ABI文档说明
-    cd eos_abi
     npm install -g pm2 
     npm install
     #启动服务
@@ -26,18 +25,21 @@
       }
 
 
-# 前端demo
-    //可以直接运行，用的是当前https://explorer.eosforce.io投票的服务器，您也可以不配置服务器，使用当前demo的服务器配置，或者在直接在demo代码上做开发。这样您将只需要开发前端，不需要配置nginx，和ABI服务
+# 前端
+    提示:您也可以不配置服务器，使用当前demo的服务器配置，或者在直接在demo代码上做开发。这样您将只需要开发前端，不需要配置上述nginx, ABI服务
+
+
     cd eosc_scatter
     npm install
     #开发
     npm run dev
-    #打包服务器配置
+    #打包服务器
     npm run build
 
 
 # 前端调用scatter的API
 1.  getIdentity, 获取eos对象
+
 
     import Eos from 'eosjs' //安装eosjs, npm install git+https://github.com/eosforce/eosjs.git#821bea5
     const scatter = window.scatter;
@@ -69,7 +71,8 @@
     let eos = scatter.eos(network, Eos,  options, "https");
     
 
-2.vote
+
+2. vote
 
 
     //获取到的scatter的eos对象
@@ -87,7 +90,8 @@
                 };
             });
 
-3.transfer
+
+3. transfer
 
 
     //获取到的scatter的eos对象
@@ -101,7 +105,8 @@
                         }
                     });
 
-4.unfreeze
+
+4. unfreeze
 
 
     //获取到的scatter的eos对象
@@ -120,7 +125,8 @@
       });
       
 
-5.claim
+
+5. claim
 
 
     //获取到的scatter的eos对象
