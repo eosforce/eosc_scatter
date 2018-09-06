@@ -42,7 +42,7 @@
 
 
 1.  getIdentity, 获取eos对象
-    import Eos from 'eosjs' //安装eosjs, npm install git+https://github.com/eosforce/eosjs.git#821bea5
+    import Eos from 'eosjs' 
     const scatter = window.scatter;
     // 节点配置
     const network = {
