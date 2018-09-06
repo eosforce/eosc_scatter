@@ -1,6 +1,4 @@
 <template>
-    <div>
-        
         <div class="main_content">
             
             <div class="info_box" v-if="has_scatter">
@@ -12,7 +10,6 @@
             </div>
 
         </div>
-    </div>
 </template>
 <script>
 import web_wallet from '../web_wallet/web_wallet.vue'
