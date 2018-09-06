@@ -130,7 +130,6 @@
 <script>
 import '../../assets/css/index.css'
 import '../../assets/css/fadeload.css'
-import '../../assets/css/mobile.css'
 import '../../assets/image/web/favicon.ico'
 import {
     get_bps, vote, transfer, unfreeze, claim, get_my_vote_llist, get_top_bps, get_available
