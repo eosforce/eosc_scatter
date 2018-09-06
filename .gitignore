@@ -1,0 +1,4 @@
+*.DS_Store
+/eos_abi/node_modules/*
+/eosc_scatter/node_modules/*
+/eosc_scatter/dist/*
