@@ -17,7 +17,7 @@
               proxy_set_header X-Forwarded-For $remote_addr;
           }
           location /v1/chain/get_abi {
-              #上边启动node服务的host:port
+              #上边启动ABI服务的host:port
               proxy_pass http://127.0.0.1:5000;
               proxy_set_header Host            $host;
               proxy_set_header X-Forwarded-For $remote_addr;
