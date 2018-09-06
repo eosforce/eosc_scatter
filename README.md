@@ -41,8 +41,10 @@
 # 前端调用scatter的API
 
 
-1.  getIdentity, 获取eos对象
-    import Eos from 'eosjs' 
+1.  getIdentity, 获取scatter的eos对象
+
+
+    import Eos from 'eosjs' //安装eosjs, npm install git+https://github.com/eosforce/eosjs.git#821bea5
     const scatter = window.scatter;
     // 节点配置
     const network = {
@@ -74,6 +76,8 @@
 
 
 2. vote
+
+
     //获取到的scatter的eos对象
     eos.vote(account_name, bpname, toAsset(amount, tokenSymbol), permission)
             .then(data => {
@@ -91,6 +95,8 @@
 
 
 3. transfer
+
+
     //获取到的scatter的eos对象
     let token = await eos.contract(tokenSymbol === 'EOS' ? 'eosio' : 'eosio.token').then(token => { return token });
     
@@ -104,6 +110,8 @@
 
 
 4. unfreeze
+
+
     //获取到的scatter的eos对象
     eos.unfreeze(account_name, bpname, permission)
       .then(data => {
@@ -122,6 +130,8 @@
 
 
 5. claim
+
+
     //获取到的scatter的eos对象
     eos.claim(account_name, bpname, permission)
                     .then(data => {
