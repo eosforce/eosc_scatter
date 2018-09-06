@@ -115,9 +115,9 @@ export default {
             if(this.available.is_error){
                 this.scatter_error_info = this.available.msg.message;
             }
-            this.is_on_load = false;
             if(!is_circle) return ;
             setTimeout(async () => {
+                this.is_on_load = false;
                 await this.get_available(is_circle);
             }, 3000);
         },

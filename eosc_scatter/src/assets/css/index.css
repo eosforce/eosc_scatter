@@ -339,6 +339,17 @@ div{
 .dw_nav_item:hover .dw_nav_list{
     display: block;
 }
+.close_nav{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('../image/web/close_nav.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    right: 10px;
+    top: 10px;
+}
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg)
