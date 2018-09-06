@@ -27,7 +27,7 @@
 
 
 # 前端demo
-    //可以直接运行，用的是当前https://explorer.eosforce.io投票的服务器，您也可以不配置服务器，使用当前demo的服务器配置。
+    //可以直接运行，用的是当前https://explorer.eosforce.io投票的服务器，您也可以不配置服务器，使用当前demo的服务器配置，或者在直接在demo代码上做开发。这样您将只需要开发前端，不需要配置nginx，和ABI服务
     cd eosc_scatter
     npm install
     #开发
