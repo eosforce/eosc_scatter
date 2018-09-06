@@ -41,7 +41,7 @@
 # 前端调用scatter的API
 
 
-1.  getIdentity, 获取scatter的eos对象
+1.getIdentity, 获取scatter的eos对象
 
 
     import Eos from 'eosjs' //安装eosjs, npm install git+https://github.com/eosforce/eosjs.git#821bea5
@@ -75,7 +75,7 @@
     
 
 
-2. vote
+2.vote
 
 
     //获取到的scatter的eos对象
@@ -94,7 +94,7 @@
             });
 
 
-3. transfer
+3.transfer
 
 
     //获取到的scatter的eos对象
@@ -109,7 +109,7 @@
                     });
 
 
-4. unfreeze
+4.unfreeze
 
 
     //获取到的scatter的eos对象
@@ -129,7 +129,7 @@
       
 
 
-5. claim
+5.claim
 
 
     //获取到的scatter的eos对象
