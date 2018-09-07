@@ -1,6 +1,10 @@
 # eosc_scatter 使用说明和部署文档
 
+# 使用git下载当前项目
+    git clone https://github.com/eosforce/eosc_scatter
+
 # 安装ABI文档说明
+    #进入下载后的项目目录
     npm install -g pm2 
     npm install
     #启动服务

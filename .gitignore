@@ -2,3 +2,5 @@
 /eos_abi/node_modules/*
 /eosc_scatter/node_modules/*
 /eosc_scatter/dist/*
+/eosc_scatter/package-lock.json
+/eosc_scatter/yarn.lock

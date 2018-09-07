@@ -1,24 +1,24 @@
 <style>
-    .wallet_table .base_tb_ct tr td, .wallet_table .base_tb_ct tr th{
-        padding: 5px 10px;
-    }
-    .gray_ft{
-        color: #888;
-    }
-    .gray_ft:hover{
-        color: #888;
-    }
-    .unfreeze_tag{
-        border: 1px solid #0070e0;
-        line-height: 1;
-        font-size: 12px;
-        padding: 2px;
-        border-radius: 3px;
-        color: #0070e0;
-        transform: scale(0.8);
-        display: inline-block;
-        margin-left: -4px;
-    }
+.wallet_table .base_tb_ct tr td, .wallet_table .base_tb_ct tr th{
+    padding: 5px 10px;
+}
+.gray_ft{
+    color: #888;
+}
+.gray_ft:hover{
+    color: #888;
+}
+.unfreeze_tag{
+    border: 1px solid #0070e0;
+    line-height: 1;
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 3px;
+    color: #0070e0;
+    transform: scale(0.8);
+    display: inline-block;
+    margin-left: -4px;
+}
 </style>
 <template>
     <div class="base_table">
