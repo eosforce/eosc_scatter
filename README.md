@@ -1,4 +1,4 @@
-# eosc_scatter 使用说明和部署文档
+# 开发基于Chrome scatter钱包的应用的说明和部署文档
 
 # 使用git下载当前项目
     git clone https://github.com/eosforce/eosc_scatter
