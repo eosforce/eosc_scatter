@@ -3,7 +3,88 @@ export default {
     "abi": {
         "version": "eosio::abi/1.0",
         "types": [],
-        "structs": [{
+        "structs": [
+        {
+            "name": "wait_weight",
+            "base": "",
+            "fields": [
+                {
+                    "name": "wait_sec",
+                    "type": "uint32"
+                },
+                {
+                    "name": "weight",
+                    "type": "weight_type"
+                }
+            ]
+        },
+        {
+            "name": "permission_level_weight",
+            "base": "",
+            "fields": [
+                {
+                    "name": "permission",
+                    "type": "permission_level"
+                },
+                {
+                    "name": "weight",
+                    "type": "weight_type"
+                }
+            ]
+        },
+        {
+            "name": "key_weight",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "public_key"
+                },
+                {
+                    "name": "weight",
+                    "type": "weight_type"
+                }
+            ]
+        },
+        {
+            "name": "authority",
+            "base": "",
+            "fields": [
+                {
+                    "name": "threshold",
+                    "type": "uint32"
+                },
+                {
+                    "name": "keys",
+                    "type": "key_weight[]"
+                },
+                {
+                    "name": "accounts",
+                    "type": "permission_level_weight[]"
+                },
+                {
+                    "name": "waits",
+                    "type": "wait_weight[]"
+                }
+            ]
+        },
+        {
+            "name": "newaccount",
+            "base": "",
+            "fields": [{
+                "name": "creator",
+                "type": "account_name"
+            }, {
+                "name": "name",
+                "type": "account_name"
+            }, {
+                "name": "owner",
+                "type": "authority"
+            }, {
+                "name": "active",
+                "type": "authority"
+            }]
+        },{
             "name": "transfer",
             "base": "",
             "fields": [{
@@ -188,7 +269,12 @@ export default {
                 "type": "producer[]"
             }]
         }],
-        "actions": [{
+        "actions": [
+        {
+            "name": "newaccount",
+            "type": "newaccount",
+            "ricardian_contract": ""
+        },{
             "name": "transfer",
             "type": "transfer",
             "ricardian_contract": ""

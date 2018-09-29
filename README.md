@@ -39,7 +39,7 @@
     #开发
     npm run dev
     #打包服务器
-    npm run build // eosc_scatter/dist/ 目录将会有压缩后的应用
+    npm run build # eosc_scatter/dist/ 目录将会有压缩后的应用
 
 
 # 前端调用scatter的API
@@ -62,13 +62,13 @@
         chainId: 'bd61ae3a031e8ef2f97ee3b0e62776d6d30d4833c8f7c1645c657b149151004b',
     }
     let identify = scatter.getIdentity({accounts:[network]});
-    //获取到scatter配置d的account
+    //获取到scatter配置的account
     const account = identity.accounts.find(function(acc){
         return acc.blockchain === 'eos';
     });
     //account.authority 是permission
-    //选择的用户名account.name
-    //创建操作的配置
+    //account.name是选择的用户名
+    //配置操作用户
     let options = {
          authorization: account.name+'@'+account.authority,
          broadcast: true,
@@ -82,8 +82,8 @@
 2.vote，投票
 
 
-    //获取到的scatter的eos对象
-    eos.vote(account_name, bpname, toAsset(amount, tokenSymbol), permission)
+    //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
+    eos.vote(account_name, bpname, '0.0001 EOS', permission)
             .then(data => {
                 return {
                     is_error: false,
@@ -101,10 +101,10 @@
 3.transfer，转账
 
 
-    //获取到的scatter的eos对象
+    //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     let token = await eos.contract(tokenSymbol === 'EOS' ? 'eosio' : 'eosio.token').then(token => { return token });
     
-    token.transfer(account_name, to, toAsset(amount), memo, permission)
+    token.transfer(account_name, to, '0.0001 EOS', memo, permission)
                     .then(data => {
                         return {
                             is_error: false,
@@ -116,7 +116,7 @@
 4.unfreeze，解冻
 
 
-    //获取到的scatter的eos对象
+    //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.unfreeze(account_name, bpname, permission)
       .then(data => {
           return {
@@ -136,7 +136,7 @@
 5.claim，领取分红
 
 
-    //获取到的scatter的eos对象
+    //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.claim(account_name, bpname, permission)
                     .then(data => {
                         return {
@@ -151,3 +151,24 @@
                         };
                     });
 
+
+5. 创建账号
+
+```
+  //创建账号
+  /*
+    creator 创建者名称, scatter 用户名
+    new_name 新创建的用户
+    publicKey 被创建人的公钥
+    publicKey 被创建人的公钥
+    permission 当前使用权限
+  */
+
+  eos.newaccount(creator, new_name, publicKey, publicKey, permission)
+                .then(data => {
+                    console.log( data );
+                })
+                .catch(err => {
+                  return handleApiError(err);
+                });
+```

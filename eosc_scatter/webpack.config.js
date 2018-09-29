@@ -106,7 +106,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'), 
         hot: true, 
         host: '0.0.0.0',
-        port: 8088,
+        port: 8188,
         open: true
     },
 
