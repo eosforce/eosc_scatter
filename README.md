@@ -159,8 +159,8 @@
   /*
     creator 创建者名称, scatter 用户名
     new_name 新创建的用户
-    publicKey 被创建人的公钥
-    publicKey 被创建人的公钥
+    publicKey 被创建人的公钥 owner权限公钥
+    publicKey 被创建人的公钥 active权限公钥
     permission 当前使用权限
   */
 
