@@ -33,7 +33,6 @@
 
 提示:您也可以不配置服务器，使用当前demo的服务器配置，或者在直接在demo代码上做开发。这样您将只需要开发前端，不需要配置上述nginx, ABI服务
 
-
     cd eosc_scatter
     npm install
     #开发
@@ -84,18 +83,18 @@
 ```js
     //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.vote(account_name, bpname, '0.0001 EOS', permission)
-            .then(data => {
-                return {
-                    is_error: false,
-                    data
-                };
-            })
-            .catch(err => {
-                return {
-                    is_error: true,
-                    msg: err
-                };
-            });
+    .then(data => {
+        return {
+            is_error: false,
+            data
+        };
+    })
+    .catch(err => {
+        return {
+            is_error: true,
+            msg: err
+        };
+    });
 ```
 
 3.transfer，转账
@@ -105,12 +104,12 @@
     let token = await eos.contract(tokenSymbol === 'EOS' ? 'eosio' : 'eosio.token').then(token => { return token });
     
     token.transfer(account_name, to, '0.0001 EOS', memo, permission)
-                    .then(data => {
-                        return {
-                            is_error: false,
-                            data
-                        }
-                    });
+    .then(data => {
+        return {
+            is_error: false,
+            data
+        }
+    });
 
 ```
 
@@ -119,18 +118,18 @@
 ```js
     //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.unfreeze(account_name, bpname, permission)
-      .then(data => {
-          return {
-              is_error: false,
-              data
-          };
-      })
-      .catch(err => {
-          return {
-              is_error: true,
-              msg: err
-          };
-      });
+    .then(data => {
+        return {
+            is_error: false,
+            data
+        };
+    })
+    .catch(err => {
+        return {
+            is_error: true,
+            msg: err
+        };
+    });
   ```
 
 5.claim，领取分红
@@ -138,18 +137,18 @@
 ```js
     //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.claim(account_name, bpname, permission)
-                    .then(data => {
-                        return {
-                            is_error: false,
-                            data
-                        };
-                    })
-                    .catch(err => {
-                        return {
-                            is_error: true,
-                            msg: err
-                        };
-                    });
+    .then(data => {
+        return {
+            is_error: false,
+            data
+        };
+    })
+    .catch(err => {
+        return {
+            is_error: true,
+            msg: err
+        };
+    });
 ```
 
 5. 创建账号
