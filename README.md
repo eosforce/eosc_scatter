@@ -47,7 +47,7 @@
 
 1.getIdentity, 获取scatter的eos对象，用户名，权限
 
-
+```js
     import Eos from 'eosjs' //安装eosjs, npm install git+https://github.com/eosforce/eosjs.git#821bea5
     const scatter = window.scatter;
     // 节点配置
@@ -76,12 +76,12 @@
     }
     //获取eos对象
     let eos = scatter.eos(network, Eos,  options, "https");
-    
+``` 
 
 
 2.vote，投票
 
-
+```js
     //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.vote(account_name, bpname, '0.0001 EOS', permission)
             .then(data => {
@@ -96,11 +96,11 @@
                     msg: err
                 };
             });
-
+```
 
 3.transfer，转账
 
-
+```js
     //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     let token = await eos.contract(tokenSymbol === 'EOS' ? 'eosio' : 'eosio.token').then(token => { return token });
     
@@ -112,10 +112,11 @@
                         }
                     });
 
+```
 
 4.unfreeze，解冻
 
-
+```js
     //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.unfreeze(account_name, bpname, permission)
       .then(data => {
@@ -130,12 +131,11 @@
               msg: err
           };
       });
-      
-
+  ```
 
 5.claim，领取分红
 
-
+```js
     //获取到的scatter的eos对象，permission是getIdentity获取到的 account.authority
     eos.claim(account_name, bpname, permission)
                     .then(data => {
@@ -150,11 +150,11 @@
                             msg: err
                         };
                     });
-
+```
 
 5. 创建账号
 
-```
+```js
   //创建账号
   /*
     creator 创建者名称, scatter 用户名
@@ -165,16 +165,16 @@
   */
 
   eos.newaccount(creator, new_name, publicKey, publicKey, permission)
-                .then(data => {
-                    return {
-                            is_error: false,
-                            data
-                    };
-                })
-                .catch(err => {
-                    return {
-                            is_error: true,
-                            msg: err
-                    };
-                });
+  .then(data => {
+      return {
+              is_error: false,
+              data
+      };
+  })
+  .catch(err => {
+      return {
+              is_error: true,
+              msg: err
+      };
+  });
 ```
