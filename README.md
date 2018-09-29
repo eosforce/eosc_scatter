@@ -166,9 +166,15 @@
 
   eos.newaccount(creator, new_name, publicKey, publicKey, permission)
                 .then(data => {
-                    console.log( data );
+                    return {
+                            is_error: false,
+                            data
+                    };
                 })
                 .catch(err => {
-                  return handleApiError(err);
+                    return {
+                            is_error: true,
+                            msg: err
+                    };
                 });
 ```
