@@ -29,7 +29,7 @@ document.addEventListener('scatterLoaded', scatterExtension => {
 });
 // 调用 scatter 桌面
 ScatterJS.scatter.connect("scatter").then(connected => {
-    //可以在连接成功后，也将scatter绑定到window
+    //可以在连接成功后，也可将scatter绑定到window
     window.scatter = ScatterJS.scatter;
     alert(window.scatter);
 })
