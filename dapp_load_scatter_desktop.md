@@ -1,4 +1,4 @@
-# 浏览器调用 Scatter Desktop 
+# 浏览器调用 Scatter Desktop 和 scatter chrome 插件
 
 ## 安装依赖
 npm install
